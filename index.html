@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Velasquez - Programmer</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- Google Font: Inter (clean & modern) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Hello I'm Carlos Velasquez</h1>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- ABOUT ME -->
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>
+                Hi! I'm Carlos, a computer programming student at Lone Star College focusing on web development, game development with Unity,
+                and C++. I have always been facinated with technology hence why I program, building something from zero lines of code
+                is always going to facinate me. My journey has only just begun and I hope to gain more experience as I continue to code.
+            </p>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+
+            <div class="project-card">
+                <h3>Turret Trajectory & Laser Reflect</h3>
+                <p>
+                   A very useful assignment that I did in my Game Development class that made me fully undestand Vector.normalized and Raycasts in Unity. 
+                <p>
+                    The <strong>Projectile Turret</strong> currently shoots a projectile in an arc toward a target point.
+                </p>
+                <p>
+                    The <strong>Laser Turret</strong> fires a laser at a target point, but now the laser can bounce off surfaces. It stops at the next surface it hits, with optional recursion for additional bounces. 
+                </p>
+                <p>
+                    Completing these turrets required problem-solving and translating equations into code. For the trajectory turret, kinematic equations were used to calculate motion over time. For the laser turret, vector math and dot products were implemented manually (without Unity's Vector3.Reflect) to reflect the laser correctly.
+                </p>
+                <a href="https://github.com/carlos-codes10/Trajectory" target="_blank" class="github-link">
+                    <img src="github-logo.png" alt="GitHub Repository" class="github-logo">
+                </a>
+
+                <video class="placeholder-video" controls>
+                    <source src="project1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="project-card">
+                <h3>Boss Fight</h3>
+                <p>
+                   From my final project in game development, I created a boss fight for a third-person action/adventure game. The project uses a pre-existing game template, and namespaces are implemented to simulate working in a collaborative development environment.
+                </p>
+                <p>
+                    This project involves implementing a <strong>state machine</strong> (or behavior tree) outside of the Enum State Machine Method that I was used to. The boss has <strong>three phases</strong>—Initial, Mid-Battle, and Enraged—each adding new attacks and mechanics as health decreases.
+                </p>
+                <p>
+                    Required features include melee and ranged attacks, AoE or multi-stage attacks, telegraphed movements, environmental interactions, and defensive maneuvers. The project emphasizes problem-solving, translating game design into code, and implementing additional attacks and phases while integrating with existing systems.
+                </p>
+                <p>
+                   This project demonstrates my ability to work with complex game systems, adhere to project constraints, and develop gameplay mechanics that interact correctly with existing code.
+                </p>
+                <a href="https://github.com/carlos-codes10/BossFight" target="_blank" class="github-link">
+                    <img src="github-logo.png" alt="GitHub Repository" class="github-logo">
+                </a>
+
+                <video class="placeholder-video" controls>
+                    <source src="video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="section-content">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>Email <a href="mailto:carlvp10@gmail.com">carlvp10@gmail.com</a></p>
+                <p>GitHub 
+                    <a href="https://github.com/carlos-codes10" target="_blank">
+                        <img src="github-logo.png" alt="GitHub" class="github-logo">
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+    font-family:'Inter','Segoe UI',sans-serif;
+    background:#0a1a2f;
+    color:#e0e7ff;
+    line-height:1.8;
+    overflow-x:hidden;
+}
+
+/* Header */
+header {
+    position:fixed; top:0; left:0; width:100%;
+    padding:20px 5%;
+    background:rgba(9,22,39,0.95);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+header h1 { font-size:1.6rem; font-weight:700; color:white; }
+nav a {
+    color:#bcdcff; text-decoration:none; margin:0 12px; font-size:0.95rem; font-weight:500;
+    position:relative;
+}
+nav a::after { content:''; position:absolute; left:0; bottom:-6px; width:0; height:2px; background:#1abc9c; transition:0.3s; }
+nav a:hover, nav a:hover::after { color:#1abc9c; width:100%; }
+
+/* Sections */
+section {
+    min-height:100vh;
+    padding:140px 5% 100px;
+    display:flex;
+    align-items:center;
+    background-size:cover;
+    background-position:center;
+    background-attachment:scroll;
+}
+
+/* Backgrounds */
+#about    { background-image:linear-gradient(rgba(10,26,47,0.92),rgba(10,26,47,0.98)), url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&q=80&w=2560&auto=format'); }
+#projects { background-image:linear-gradient(rgba(10,26,47,0.92),rgba(10,26,47,0.98)), url('https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?q=80&w=2560&auto=format'); }
+#contact  { background-image:linear-gradient(rgba(10,26,47,0.94),rgba(10,26,47,0.99)), url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=2560&auto=format'); }
+
+/* Main container */
+.section-content {
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 30px;
+    text-align:center;
+}
+
+/* Paragraphs = left-aligned on desktop, centered on mobile for readability */
+.section-content p,
+.project-card p,
+#about p {
+    text-align:left;
+    margin-bottom:1.3rem;
+}
+
+/* PROJECT CARDS */
+.project-card {
+    background:rgba(17,36,61,0.82);
+    backdrop-filter:blur(14px);
+    padding:40px 35px;
+    margin:50px auto;
+    max-width:900px;
+    border-radius:20px;
+    border:1px solid rgba(80,120,150,0.3);
+    transition:all .4s;
+}
+.project-card:hover {
+    transform:translateY(-10px);
+    box-shadow:0 25px 50px rgba(0,0,0,0.5);
+    border-color:rgba(26,188,156,0.5);
+}
+.project-card video {
+    width:100%;
+    border-radius:14px;
+    margin-top:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* MOBILE PERFECTION */
+@media (max-width: 768px) {
+    header { padding:18px 4%; flex-direction:column; gap:12px; }
+    header h1 { font-size:1.5rem; }
+    nav a { margin:0 10px; font-size:0.9rem; }
+
+    h2 { font-size:2.8rem !important; }
+    h3 { font-size:1.7rem !important; }
+
+    section { padding:100px 5% 80px; min-height:90vh; }
+
+    .section-content { padding:0 15px; }
+    .section-content p,
+    .project-card p,
+    #about p { text-align:center !important; }   /* centered text on phone = much cleaner */
+
+    .project-card {
+        padding:35px 25px;
+        margin:40px auto;
+        border-radius:16px;
+    }
+
+    .contact-info { font-size:1.35rem; gap:24px; }
+    .contact-info p:hover { transform:none; }   /* remove hover jump on touch */
+}
+
+@media (max-width: 480px) {
+    h2 { font-size:2.4rem !important; }
+    .project-card { padding:30px 20px; }
+}
+
+/* Typography */
+h2 { font-size:3.8rem; font-weight:800; color:white; margin-bottom:2rem; text-shadow:0 4px 20px rgba(0,0,0,0.6); }
+h3 { font-size:2rem; color:white; margin-bottom:1.2rem; font-weight:700; }
+
+/* GitHub & Contact */
+.github-logo { width:38px; height:38px; filter:brightness(0) invert(1); transition:all .4s; }
+.github-logo:hover { transform:scale(1.25) rotate(8deg); filter:brightness(0) invert(0.8) sepia(1) saturate(5) hue-rotate(130deg); }
+
+.contact-info { display:flex; flex-direction:column; gap:28px; font-size:1.5rem; font-weight:500; align-items:center; }
+.contact-info p { display:flex; align-items:center; gap:16px; transition:.3s; }
+.contact-info p:hover { color:white; }
+.contact-info a { color:#1abc9c; text-decoration:none; }
+.contact-info a:hover { color:white; }
+
+::selection { background:#1abc9c; color:#0a1a2f; }
